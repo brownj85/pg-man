@@ -2,12 +2,12 @@ from dataclasses import dataclass
 from pathlib import PurePosixPath, Path
 from typing import TypeAlias
 from collections.abc import Mapping
-from db_man.lib.front_matter import FrontMatter
+from pg_man.lib.front_matter import FrontMatter
 import logging
 from pydantic import BaseModel, ConfigDict
 from contextlib import contextmanager
 import sqlalchemy as sa
-from db_man.lib import sort
+from pg_man.lib import sort
 
 logger = logging.getLogger("dbman")
 

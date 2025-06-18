@@ -1,6 +1,6 @@
-from db_man.lib import db, pg
-from db_man.lib.schema import ddl, revisions
-from db_man.config import Settings
+from pg_man.lib import db, pg
+from pg_man.lib.schema import ddl, revisions
+from pg_man.config import Settings
 import tempfile
 import subprocess
 from pathlib import Path

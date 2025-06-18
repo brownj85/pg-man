@@ -2,7 +2,7 @@
 
 ARG UID=1000
 ARG GID=1000
-ARG USER=dbman
+ARG USER=pgman
 ARG USER_HOME=/var/lib/${USER}
 ARG LIB_PATH=${USER_HOME}/lib
 
@@ -16,6 +16,7 @@ RUN wget ${APGDIFF_DOWNLOAD_URL} && \
     mv apgdiff-release_2.7.0/releases/apgdiff-2.7.0.jar /apgdiff-2.7.0.jar
 
 FROM python:3.13-slim-bookworm AS setup-user
+
 ARG UID
 ARG GID
 ARG USER
@@ -69,4 +70,4 @@ ENV PATH=${USER_HOME}/lib/bin:${PATH}
 COPY --from=install-lib --chown=${UID}:${GID} ${USER_HOME}/lib ${USER_HOME}/lib
 COPY --from=fetch-apgdiff --chown=${UID}:${GID} /apgdiff-2.7.0.jar ${USER_HOME}/lib/apgdiff-2.7.0.jar
 
-ENTRYPOINT ["dbman"]
+ENTRYPOINT ["pgman"]

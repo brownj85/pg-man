@@ -1,6 +1,6 @@
 import cyclopts
-from db_man.lib import schema, db
-from db_man import config
+from pg_man.lib import schema, db
+from pg_man import config
 import logging
 import sys
 

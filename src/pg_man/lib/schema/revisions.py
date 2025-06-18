@@ -6,7 +6,7 @@ import parse
 import functools
 import sqlalchemy as sa
 import logging
-from db_man.lib.uid import short_uid
+from pg_man.lib.uid import short_uid
 
 logger = logging.getLogger("db_man.revisions")
 

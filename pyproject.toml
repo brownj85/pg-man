@@ -1,7 +1,7 @@
 [project]
-name = "db-man"
+name = "pg-man"
 version = "0.1.0"
-description = "Add your description here"
+description = ""
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.scripts]
-dbman = "db_man.app:app"
+pgman = "pg_man.app:app"
 
 [build-system]
 requires = ["hatchling"]
